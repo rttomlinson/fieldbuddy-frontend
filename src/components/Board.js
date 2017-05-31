@@ -10,8 +10,7 @@ const Board = (props) => {
       <Card className="boardBoxes">
         <NavLink to={`/dashboard/boards/${id}`}>
             <CardBlock>
-              <CardTitle>{name}</CardTitle>
-              <CardSubtitle>{description}</CardSubtitle>
+              <CardSubtitle>{name}</CardSubtitle>
             </CardBlock>
         </NavLink>
       </Card>
