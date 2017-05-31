@@ -22,6 +22,7 @@ const StrapCard = (props) => {
         card,
         currentBoard
     } = props;
+    console.log("card is now from card component", card);
     return (
         <Card>
         <CardBlock>

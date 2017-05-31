@@ -42,7 +42,7 @@ function getCrumbs(...entities) {
         if (!entity) {
             return crumb;
         }
-        crumb += `${entity.id}>`;
+        crumb += `${entity.name || entity.title}>`;
     });
     return crumb;
 }
@@ -104,23 +104,3 @@ function mapDispatchToProps(dispatch, ownProps) {
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DashboardNav));
-
-
-
-// function getLocationObj(path) {
-//     let locationObj;
-//     //if trailing / remove it
-//     if (path.charAt(path.length - 1) === '/') {
-//         path = path.slice(0, path.length - 1);
-//     }
-//     //remove leading dashboard and /
-//     let dashboardIndex = path.indexOf('dashboard/');
-//     path = path.slice(dashboardIndex + 10);
-//     //split at /s
-//     let pathPairs = path.split('/');
-
-//     for (let i = 0; i < pathPairs.length; i += 2) {
-//         locationObj[pathPairs[i]] = pathPairs[i + 1];
-//     }
-//     return locationObj;
-// }

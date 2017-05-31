@@ -27,8 +27,6 @@ import {
 from '../actions/boardsActions';
 
 
-
-
 const CardModalBody = ({
     description,
     toggleEditDescription
@@ -157,7 +155,7 @@ class CardModal extends React.Component {
         }) : CardModalBody({
             description: this.state.scopedDescription,
             toggleEditDescription: this.toggleEditDescription
-        })
+        });
 
 
         return (

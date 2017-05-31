@@ -3,9 +3,6 @@ import {connect} from 'react-redux';
 import { requestCardUpdate } from '../actions/boardActions';
 import Card from '../Card';
 
-
-
-
 function mapDispatchToProps(dispatch) {
     return {
         requestCardUpdate: (form, cardId) => {

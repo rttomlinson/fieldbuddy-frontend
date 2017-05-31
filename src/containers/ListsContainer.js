@@ -33,14 +33,13 @@ class ListsContainer extends Component {
     render() {
         const {
             selectedList,
-            boardId,
             currentBoard
         } = this.props;
         if (selectedList === -1) {
             return (
                 <div>
                     <p>Hmm...looks like there isn't a list by that name. Trying going back to the board and selected something else.</p>
-                    <NavLink to={`/dashboard/boards/${boardId}`}>Back to the board</NavLink>
+                    <NavLink to={`/dashboard/boards/${currentBoard.id}`}>Back to the board</NavLink>
                 </div>
             );
         }
@@ -66,7 +65,6 @@ function mapStateToProps(state, ownProps) {
             return board.id == ownProps.match.params.boardId;
         }),
         selectedList,
-        boardId: ownProps.match.params.boardId
     };
 }
 
